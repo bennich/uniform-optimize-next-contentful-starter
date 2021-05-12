@@ -10,6 +10,7 @@ import { ComponentMapping } from '../lib/ComponentMapping';
 import TalkList from '../components/TalkList';
 import { RegisterForm } from '../components/RegisterForm';
 import { WhyAttendTestPhotoLocation } from '../components/WhyAttend';
+import {DevLanguages} from '../components/Devlanguages'
 
 export interface PageProps {
   slug: string;
@@ -25,6 +26,7 @@ const componentMapping: ComponentMapping = {
   talksList: TalkList,
   registrationForm: RegisterForm,
   whyAttend: WhyAttendTestPhotoLocation,
+  developerLanguagesList: DevLanguages,
 };
 
 export function Home({ page, talks }: PageProps) {
