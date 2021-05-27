@@ -14,6 +14,14 @@ export const DevLanguages = () => {
       console.log(tracked);
   };
 
+  const OnEnrichmentClickFireEvent = async (event: string) => {
+    const eventFired = await tracker?.addEvent({
+        label: 'EventTestLabel', 
+        category: 'EventTestCategory',
+        value: 'EventTestValue',
+    })
+  };
+
 
     return (
       <>
@@ -67,16 +75,16 @@ export const DevLanguages = () => {
       <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow space-y-2 pt-2">
         <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden">
           <div className="mt-3 mb-3 flex items-center justify-start">
-            C#
+            Trigger Event Signal
           </div>
         </div>
         <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-          <div className="w-full font-bold text-xl text-gray-800 px-6">We would like to know your preferences</div>
+          <div className="w-full font-bold text-xl text-gray-800 px-6">Trigger Event Signal</div>
         </a>
         <div className="text-gray-800 px-6 pb-6 text-sm">
         <button
                   type="button"
-                  onClick={ () => OnEnrichmentClick('Csharp')}
+                  onClick={ () => OnEnrichmentClickFireEvent('EventTestLabel')}
                   className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
                 >
                   C#
