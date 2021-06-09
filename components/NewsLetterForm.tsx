@@ -25,6 +25,7 @@ export const NewsLetterForm = () => {
 
     return (
       <>
+
 <form name="contact" method="POST" data-netlify="true" content-type="application/x-www-form-urlencoded" action="/">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
@@ -44,6 +45,7 @@ export const NewsLetterForm = () => {
   <p>
     <button type="submit">Send</button>
   </p>
+  <input type="hidden" name="form-name" value="contact" />
 </form>
 
     </>
